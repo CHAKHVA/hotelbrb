@@ -1,110 +1,101 @@
+"use client";
 
-"use client"
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+// components/Header.js
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
-]
+    { name: "HOME", href: "/" },
+    { name: "ABOUT", href: "/about" },
+    { name: "ROOMS", href: "#" },
+    { name: "CONTACT", href: "#" },
+];
 
-export default function Example() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function Header() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activePage, setActivePage] = useState("HOME");
 
     return (
-        <div className="bg-white">
-
-
-            <header className="fixed inset-x-0 top-0 z-50">
-                <nav className="flex items-center justify-between p-7 lg:px-8 mx-auto" aria-label="Global">
-                    <div className="flex lg:flex-1">
-                        <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
-                            <img
-                                className="h-20 w-auto"
-                                src="/img/pngegg.png"
-                                alt=""
+        <header className="fixed inset-x-0 top-0 z-50 bg-opacity-0 font-sans">
+            <div className="container mx-auto p-4 flex justify-between items-center">
+                <div className="flex items-center space-x-4">
+                    <Image
+                        src="/img/pngegg.png"
+                        alt="Hotel Logo"
+                        width={150}
+                        height={50}
+                    />
+                </div>
+                <div className="md:hidden">
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="text-white z-50"
+                    >
+                        {isMobileMenuOpen ? (
+                            <Bars3Icon
+                                className="h-6 w-6 hidden"
+                                aria-hidden="true"
                             />
-                        </Link>
-                    </div>
-                    <div className="flex lg:hidden">
-                        <button
-                            type="button"
-                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                            onClick={() => setMobileMenuOpen(true)}
-                        >
-                            <span className="sr-only">Open main menu</span>
+                        ) : (
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                        </button>
-                    </div>
-                    <div className="hidden lg:flex lg:gap-x-12">
-                        {navigation.map((item) => (
-                            <Link  key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white-900">
-                                {item.name}
-                            </Link>
-                        ))}
-                    </div>
-
+                        )}
+                    </button>
+                </div>
+                <nav
+                    className={`${
+                        isMobileMenuOpen ? "hidden" : ""
+                    } md:flex space-x-4 text-lg hidden`}
+                >
+                    {navigation.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className={`transition duration-200 ease-in-out hover:text-orange-500 
+                            ${
+                                activePage === item.name
+                                    ? "text-orange-500"
+                                    : "text-white"
+                            }`}
+                            onClick={() => setActivePage(item.name)}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
                 </nav>
-
-
-
-
-                <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                    <div className="fixed inset-0 z-50" />
-                    <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                        <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
-                                <img
-                                    className="h-13 w-auto"
-                                    src="/img/pngegg.png"
-                                    alt=""
-                                />
-                            </a>
-                            <button
-                                type="button"
-                                className="-m-2.5 rounded-md p-2.5 text-gray-700 "
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                <span className="sr-only">Close menu</span>
-                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                            </button>
-                        </div>
-
-
-                        <div className="mt-6 flow-root">
-                            <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6">
-                                    {navigation.map((item) => (
-                                        <Link
-                                            onClick={() => setMobileMenuOpen(false)}
-                                            key={item.name}
-                                            href={item.href}
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    ))}
-                                </div>
-                                <div className="py-6">
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
-                                        Log in
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </Dialog.Panel>
-                </Dialog>
-            </header>
-
-        </div>
-    )
+            </div>
+            <div
+                className={`${
+                    isMobileMenuOpen ? "block" : "hidden"
+                } md:hidden fixed inset-0 bg-black bg-opacity-75`}
+            >
+                <button
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-white absolute top-4 right-4 z-50"
+                >
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+                <nav className="h-full flex flex-col items-center justify-center space-y-4">
+                    {navigation.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className={`text-lg p-2 rounded-lg ${
+                                activePage === item.name
+                                    ? "text-orange-500"
+                                    : "text-white"
+                            }`}
+                            onClick={() => {
+                                setActivePage(item.name);
+                                setIsMobileMenuOpen(false);
+                            }}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+                </nav>
+            </div>
+        </header>
+    );
 }
