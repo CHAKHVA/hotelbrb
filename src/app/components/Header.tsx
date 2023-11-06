@@ -1,26 +1,24 @@
 "use client";
 
-// components/Header.js
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const navigation = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
-    { name: "ROOMS", href: "#" },
+    { name: "ROOMS", href: "/rooms" },
     { name: "CONTACT", href: "#" },
 ];
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [activePage, setActivePage] = useState("HOME");
-
+    const [activePage, setActivePage] = useState(usePathname());
 
     return (
-        <header className="fixed inset-x-0 top-0 z-50 bg-opacity-0 font-sans">
+        <header className="sticky inset-x-0 top-0 z-50 bg-opacity-0 font-sans border-b-2 border-black">
             <div className="container mx-auto p-4 flex justify-between items-center">
                 <div className="flex items-center space-x-4">
                     <Image
@@ -56,11 +54,11 @@ export default function Header() {
                             href={item.href}
                             className={`transition duration-200 ease-in-out hover:text-orange-500 
                             ${
-                                activePage === item.name
+                                activePage === item.href
                                     ? "text-orange-500"
                                     : "text-white"
                             }`}
-                            onClick={() => setActivePage(item.name)}
+                            onClick={() => setActivePage(item.href)}
                         >
                             {item.name}
                         </Link>

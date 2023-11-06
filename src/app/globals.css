@@ -30,7 +30,7 @@ body {
     margin-bottom: 3000px; /* or any large value */
 }
 
-.app{
+.app {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
