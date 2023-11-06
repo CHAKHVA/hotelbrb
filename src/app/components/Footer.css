@@ -1,0 +1,26 @@
+:root{
+    --footer-side-p:6rem;
+}
+
+.footer{
+    margin-top: auto;
+    background: #171717;
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem var(--footer-side-p);
+}
+
+.contact-comp{
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

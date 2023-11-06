@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {usePathname} from "next/navigation";
 
 const navigation = [
     { name: "HOME", href: "/" },
@@ -16,6 +17,7 @@ const navigation = [
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activePage, setActivePage] = useState("HOME");
+
 
     return (
         <header className="fixed inset-x-0 top-0 z-50 bg-opacity-0 font-sans">
