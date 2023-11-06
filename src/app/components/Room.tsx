@@ -7,7 +7,7 @@ export default function Room({ room }: { room: IRoom }) {
                 room.float ? "flex-row" : "flex-row-reverse"
             } gap-3`}
         >
-            <div>
+            <div className="flex-1">
                 <Image
                     width={500}
                     height={300}
@@ -16,9 +16,12 @@ export default function Room({ room }: { room: IRoom }) {
                     className="rounded"
                 />
             </div>
-            <div>
+            <div className="flex-1">
                 <h2 className="text-3xl font-medium mb-2">{room.name}</h2>
                 <p>{room.description}</p>
+                <p className="text-2xl font-medium mb-2">
+                    {"$" + room.price + "/per night"}
+                </p>
             </div>
         </div>
     );
