@@ -10,7 +10,8 @@ const navigation = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
     { name: "ROOMS", href: "/rooms" },
-    { name: "CONTACT", href: "#" },
+    { name: "GALLERY", href: "/gallery" },
+    { name: "CONTACT", href: "/contact" },
 ];
 
 export default function Header() {
@@ -18,7 +19,7 @@ export default function Header() {
     const [activePage, setActivePage] = useState(usePathname());
 
     return (
-        <header className="sticky inset-x-0 top-0 z-50 bg-opacity-0 font-sans border-b-2 border-black">
+        <header className="sticky inset-x-0 top-0 z-50 bg-opacity-0 font-sans border-black">
             <div className="container mx-auto p-4 flex justify-between items-center">
                 <div className="flex items-center space-x-4">
                     <Image

@@ -26,10 +26,6 @@ body {
         rgb(var(--background-start-rgb));
 }
 
-.last-element {
-    margin-bottom: 3000px; /* or any large value */
-}
-
 .app {
     min-height: 100vh;
     display: flex;
