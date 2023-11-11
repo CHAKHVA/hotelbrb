@@ -1,0 +1,102 @@
+
+.fab-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* Styles for the button when not expanded */
+.fab {
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    z-index: 1000;
+    transition: all 0.2s ease;
+}
+
+.fab-icon{
+    color: aliceblue;
+    transform: scale(1.8);
+}
+
+/* Hover state for the button */
+.fab:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for when the button is expanded */
+.expanded {
+    background-color: cornsilk;
+    width: 20rem; /* Adjust as necessary */
+    height: 25rem; /* Adjust to make square */
+    border-radius: 10px; /* Adjust as necessary for a square look */
+    transition: all 0.2s ease;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+.fab-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer; /* Indicates this is clickable */
+    transition: transform 1s ease; /* Smooth transform on hover */
+}
+
+.fab.fab-container:hover {
+    transform: scale(1.2); /* Slightly enlarge the button on hover */
+}
+
+/* Phone number styling */
+.phone-number {
+    /* your existing styles */
+}
+
+@keyframes fab-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+.fab {
+    animation: fab-pulse 2s infinite;
+}
+
+.avatar{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    margin-bottom: 10%;
+
+}
+
+
+
+
+
+
+
+
+
