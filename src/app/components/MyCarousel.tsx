@@ -1,6 +1,13 @@
 import { Carousel } from "flowbite-react";
 import Image from "next/image";
 
+// @ts-ignore
+import Slider from "react-slick";
+import React from "react";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function MyCarousel({
     className = "",
     photos = undefined,
@@ -28,9 +35,17 @@ export default function MyCarousel({
           ])
         : "";
 
-    return (
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+
+    return (<>
         <div className={"h-56 sm:h-64 xl:h-80 2xl:h-96 " + className}>
-            <Carousel>
+            <Carousel  >
                 {photos.map((ph, index) => (
                     <Image
                         width={100}
@@ -46,5 +61,6 @@ export default function MyCarousel({
                 )}*/}
             </Carousel>
         </div>
+        </>
     );
 }
