@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -17,10 +17,27 @@ const navigation = [
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activePage, setActivePage] = useState(usePathname());
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsSticky(window.scrollY > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <header className="sticky inset-x-0 top-0 z-50 bg-opacity-0 font-sans border-black">
-            <div className="container mx-auto p-4 flex justify-between items-center">
+        <header
+            className={`${isSticky ? "" : "bg-opacity-30"} ${
+                activePage === "/" ? "fixed" : "sticky bg-[#191919]"
+            }  inset-x-0 top-0 z-50 transition-colors duration-300`}
+        >
+            <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center space-x-4">
                     <Image
                         src="/img/pngegg.png"

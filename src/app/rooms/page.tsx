@@ -36,7 +36,7 @@ export default function Page() {
             float: true,
         },
         {
-            id: 3,
+            id: 4,
             src: "/img/room4.jpg",
             name: "Double Suite",
             description: `Enjoy our classic suites with all the elegancy and comfort that its interior has... It features such essentials as a flat-screen 45" TV, WiFi and 2 bathrooms with a living room and 2 bedrooms...
@@ -50,11 +50,9 @@ export default function Page() {
 
     return (
         <div className="container mx-auto p-4">
-            <div className="flex flex-col justify-center justify-items-center justify-self-center content-center items-center self-center place-content-center place-items-center place-self-center">
-                {rooms.map((room: IRoom) => (
-                    <Room room={room} key={room.id} />
-                ))}
-            </div>
+            {rooms.map((room: IRoom) => (
+                <Room room={room} key={room.id} />
+            ))}
         </div>
     );
 }
