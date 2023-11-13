@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -30,4 +32,10 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+h2{
+
+    font-size: xx-large;
+    font-family: Serif, serif;
 }

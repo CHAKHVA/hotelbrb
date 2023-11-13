@@ -2,11 +2,9 @@ import { Carousel } from "flowbite-react";
 import Image from "next/image";
 
 // @ts-ignore
-import Slider from "react-slick";
 import React from "react";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 export default function MyCarousel({
     className = "",
