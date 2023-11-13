@@ -9,7 +9,7 @@ const contacts = [
 export default function Footer() {
     return (
         <>
-            <footer className="footer ">
+            <footer className="footer">
                 <div>
                     <h6>Contacts:</h6>
                     <ul>

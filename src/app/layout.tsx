@@ -3,7 +3,6 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import { useRouter } from "next/router";
 
 const roboto = Roboto({
     weight: ["400", "500", "700", "900"],

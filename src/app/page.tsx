@@ -1,10 +1,11 @@
 "use client";
 
 import { Button } from "flowbite-react";
+import Link from "next/link";
 export default function Home() {
     return (
         <div
-            className="relative min-h-screen bg-cover bg-fixed bg-center bg-no-repeat"
+            className="relative min-h-screen bg-cover bg-fixed bg-center bg-no-repeat "
             style={{
                 backgroundImage: "url('/img/img_3.png')",
             }}
@@ -21,7 +22,7 @@ export default function Home() {
                         <hr />
                     </div>
                     <Button color="warning" pill size="lg">
-                        Contact Us
+                        <Link href="/contact">Contact Us</Link>
                     </Button>
                 </div>
             </div>

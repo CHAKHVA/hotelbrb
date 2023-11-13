@@ -1,4 +1,4 @@
-import GalleryGrid from "../components/GalleryGrid";
+import GalleryGrid from "../../components/GalleryGrid";
 
 export default function Page() {
     const images: ImageData[] = [];

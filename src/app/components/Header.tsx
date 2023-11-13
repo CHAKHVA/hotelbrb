@@ -21,7 +21,7 @@ export default function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsSticky(window.scrollY > 0);
+            setIsSticky(window.scrollY > 96);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -33,18 +33,20 @@ export default function Header() {
 
     return (
         <header
-            className={`${isSticky ? "" : "bg-opacity-30"} ${
+            className={`${isSticky ? "" : "bg-opacity-0"} ${
                 activePage === "/" ? "fixed" : "sticky bg-[#191919]"
-            }  inset-x-0 top-0 z-50 transition-colors duration-300`}
+            }  mt-[6rem] inset-x-0 top-0 z-50 transition-colors duration-300`}
         >
-            <div className="container mx-auto flex justify-between items-center">
-                <div className="flex items-center space-x-4">
-                    <Image
-                        src="/img/pngegg.png"
-                        alt="Hotel Logo"
-                        width={150}
-                        height={50}
-                    />
+            <div className="container mx-auto flex justify-around items-center">
+                <div className="flex items-center space-x-2">
+                    <Link href={"/"} onClick={() => setActivePage("/")}>
+                        <Image
+                            src="/img/pngegg.png"
+                            alt="Hotel Logo"
+                            width={150}
+                            height={50}
+                        />
+                    </Link>
                 </div>
                 <div className="md:hidden">
                     <button
@@ -64,7 +66,7 @@ export default function Header() {
                 <nav
                     className={`${
                         isMobileMenuOpen ? "hidden" : ""
-                    } md:flex space-x-4 text-lg hidden`}
+                    } md:flex space-x-6 text-xl hidden`}
                 >
                     {navigation.map((item) => (
                         <Link

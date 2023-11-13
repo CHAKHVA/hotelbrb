@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Room({ room }: { room: IRoom }) {
     const isEvenRoom = (room.id + 1) % 2 === 0;
@@ -12,10 +13,10 @@ export default function Room({ room }: { room: IRoom }) {
             <div className="flex-1">
                 <div className="relative w-full h-60 lg:h-96">
                     <Image
-                        layout="fill"
-                        objectFit="cover"
                         src={room.src}
                         alt={room.name}
+                        width={500}
+                        height={300}
                         className="rounded"
                     />
                 </div>
@@ -30,7 +31,7 @@ export default function Room({ room }: { room: IRoom }) {
                         {"$" + room.price + "/per night"}
                     </p>
                     <button className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
-                        Book a Room
+                        <Link href={`/contact`}>Book a Room</Link>
                     </button>
                 </div>
             </div>
