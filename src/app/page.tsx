@@ -21,9 +21,11 @@ export default function Home() {
                         </p>
                         <hr />
                     </div>
-                    <Button color="warning" pill size="lg">
-                        <Link href="/contact">Contact Us</Link>
-                    </Button>
+                    <Link href="/contact">
+                        <Button color="warning" pill size="lg">
+                            Contact Us
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>
