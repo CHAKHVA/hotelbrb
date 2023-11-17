@@ -1,4 +1,7 @@
 
+
+"use client"
+
 import "./FAB.css"
 import { faPhone , faTimes} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -67,7 +67,7 @@ export default function Page() {
 
     return (
         <>
-            <RoomTour className={"h-10 w-28"} />
+
             <div className={"about-block py-28 px-36"}>
                 <h2
                     className={
