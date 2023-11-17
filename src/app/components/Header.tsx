@@ -19,6 +19,13 @@ export default function Header() {
     const [activePage, setActivePage] = useState(usePathname());
     const [isSticky, setIsSticky] = useState(false);
 
+
+    useEffect(()=>{
+        setActivePage(usePathname)
+    },[usePathname()])
+
+
+
     useEffect(() => {
         const handleScroll = () => {
             setIsSticky(window.scrollY > 96);
