@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import FAB from "@/app/components/FAB";
 
 const roboto = Roboto({
-    weight: ["400", "500", "700", "900"],
-    style: "normal",
+    weight: ["100", "300", "400", "500", "700", "900"],
+    style: ["normal", "italic"],
     subsets: ["latin"],
 });
 
@@ -25,11 +26,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={roboto.className}>
-                <div className="app">
+                <div>
                     <Header />
                     {children}
                     <Footer />
-                    <FAB/>
+                    <FAB />
                 </div>
             </body>
         </html>
