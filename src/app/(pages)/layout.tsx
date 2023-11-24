@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeaderImage from "@/app/components/HeaderImage";
 
 export default function PagesLayout({
@@ -8,8 +7,8 @@ export default function PagesLayout({
 }) {
     return (
         <div>
-            <HeaderImage/>
-            <main className="mt-[30vh]">{children}</main>
+            <HeaderImage />
+            <main>{children}</main>
         </div>
     );
 }
