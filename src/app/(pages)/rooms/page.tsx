@@ -11,7 +11,6 @@ export default function Page() {
                           Breakfast included
                           Price does not include VAT & services fee`,
             price: 250,
-            float: true,
         },
         {
             id: 2,
@@ -22,7 +21,6 @@ export default function Page() {
                           Breakfast included
                           Price does not include VAT & services fee`,
             price: 300,
-            float: false,
         },
         {
             id: 3,
@@ -33,7 +31,6 @@ export default function Page() {
                           Breakfast included
                           Price does not include VAT & services fee`,
             price: 350,
-            float: true,
         },
         {
             id: 4,
@@ -44,7 +41,6 @@ export default function Page() {
                           Breakfast included
                           Price does not include VAT & services fee`,
             price: 400,
-            float: false,
         },
     ];
 

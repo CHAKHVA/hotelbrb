@@ -4,5 +4,4 @@ interface IRoom {
     name: string;
     description: string;
     price: number;
-    float: boolean;
 }
