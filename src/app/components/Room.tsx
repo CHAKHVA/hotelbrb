@@ -11,11 +11,17 @@ export default function Room({ room }: { room: IRoom }) {
             } gap-8 lg:gap-16 p-4 lg:py-8 lg:px-12 my-10 bg-white shadow-lg rounded-lg`}
         >
             <div className="flex-1">
-                <div className="relative w-full h-60 lg:h-96 rounded-lg">
+                <div className="w-full h-auto rounded-lg">
                     <Image
                         src={room.src}
                         alt={room.name}
-                        fill
+                        sizes="100%"
+                        style={{
+                            width: "100%",
+                            height: "auto",
+                        }}
+                        width={500}
+                        height={300}
                         className="rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
                     />
                 </div>
