@@ -50,10 +50,41 @@ export default function Contact() {
                             className="border-2 border-gray-300 p-3 rounded-md"
                             required
                         />
-                        <textarea
-                            placeholder="Message *"
-                            className="border-2 border-gray-300 p-3 rounded-md h-32 resize-none"
+                        <input
+                            type="tel"
+                            placeholder="Phone Number *"
+                            className="border-2 border-gray-300 p-3 rounded-md"
                             required
+                        />
+                        <div className="flex items-center justify-between">
+                            <input
+                                type="number"
+                                placeholder="Number of Adults"
+                                className="border-2 border-gray-300 p-3 rounded-md w-[50%]"
+                                min="1"
+                            />
+                            <input
+                                type="number"
+                                placeholder="Number of Children"
+                                className="border-2 border-gray-300 p-3 rounded-md w-[50%]"
+                                min="0"
+                            />
+                        </div>
+                        <div className="flex items-center justify-between">
+                            <input
+                                type="date"
+                                placeholder="Check-in Date"
+                                className="border-2 border-gray-300 p-3 rounded-md w-[50%]"
+                            />
+                            <input
+                                type="date"
+                                placeholder="Check-out Date"
+                                className="border-2 border-gray-300 p-3 rounded-md w-[50%]"
+                            />
+                        </div>
+                        <textarea
+                            placeholder="Comment"
+                            className="border-2 border-gray-300 p-3 rounded-md h-32 resize-none"
                         ></textarea>
                         <button
                             type="submit"
