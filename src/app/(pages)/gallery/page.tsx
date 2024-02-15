@@ -1,4 +1,4 @@
-import GalleryGrid from "../../components/GalleryGrid";
+import ImageGallery from "@/components/GalleryGrid";
 
 export default function Page() {
     const images: ImageData[] = [];
@@ -7,7 +7,7 @@ export default function Page() {
             <h1 className="text-center text-4xl font-semibold mb-10">
                 Gallery
             </h1>
-            <GalleryGrid images={images} />
+            <ImageGallery />
         </div>
     );
 }

@@ -1,17 +1,35 @@
-import Image from "next/image";
+import React from "react";
 
-export default function GalleryGrid({ images }: { images: ImageData[] }) {
+// Generating placeholder images from Lorem Picsum
+const images = Array.from({ length: 15 }).map((_, index) => ({
+    src: `https://picsum.photos/seed/${index + 1}/600/400`, // 600x400 images with unique seeds
+    caption: `Image ${index + 1}`,
+}));
+
+const ImageGallery = () => {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {images.map((image, index) => (
-                <div key={index} className="grid gap-4">
-                    <Image
-                        className="h-auto max-w-full rounded-lg"
-                        src={image.src}
-                        alt={`Gallery image ${index + 1}`}
-                    />
-                </div>
-            ))}
+        <div className="container mx-auto px-4 py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {images.map((image, index) => (
+                    <div
+                        key={index}
+                        className="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+                    >
+                        <img
+                            src={image.src}
+                            alt={`Gallery image ${index + 1}`}
+                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <p className="text-white text-lg font-medium">
+                                {image.caption}
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
-}
+};
+
+export default ImageGallery;

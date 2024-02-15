@@ -1,10 +1,10 @@
-import Room from "../../components/Room";
+import Room from "@/components/Room";
 
 export default function Page() {
     const rooms: IRoom[] = [
         {
             id: 1,
-            src: "/img/room.jpeg",
+            src: "/images/rooms/room1.jpeg",
             name: "Premium Suite",
             description: `Enjoy our classic suites with all the elegancy and comfort that its interior has... It features such essentials as a flat-screen 45" TV, WiFi and 2 bathrooms with a living room and 2 bedrooms...
                           Only 5 rooms are available
@@ -14,7 +14,7 @@ export default function Page() {
         },
         {
             id: 2,
-            src: "/img/room2.jpeg",
+            src: "/images/rooms/room2.jpeg",
             name: "Single Suite",
             description: `Enjoy our classic suites with all the elegancy and comfort that its interior has... It features such essentials as a flat-screen 45" TV, WiFi and 2 bathrooms with a living room and 2 bedrooms...
                           Only 5 rooms are available
@@ -24,7 +24,7 @@ export default function Page() {
         },
         {
             id: 3,
-            src: "/img/room3.jpeg",
+            src: "/images/rooms/room3.jpeg",
             name: "Family Suite",
             description: `Enjoy our classic suites with all the elegancy and comfort that its interior has... It features such essentials as a flat-screen 45" TV, WiFi and 2 bathrooms with a living room and 2 bedrooms...
                           Only 5 rooms are available
@@ -34,7 +34,7 @@ export default function Page() {
         },
         {
             id: 4,
-            src: "/img/room11.jpeg",
+            src: "/images/rooms/room4.jpeg",
             name: "Double Suite",
             description: `Enjoy our classic suites with all the elegancy and comfort that its interior has... It features such essentials as a flat-screen 45" TV, WiFi and 2 bathrooms with a living room and 2 bedrooms...
                           Only 5 rooms are available

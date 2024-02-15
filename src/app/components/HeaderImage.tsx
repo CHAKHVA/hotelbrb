@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function HeaderImage() {
@@ -10,7 +9,7 @@ export default function HeaderImage() {
         <div
             className="relative h-[50vh] w-full bg-cover bg-center bg-no-repeat"
             style={{
-                backgroundImage: "url('/img/home2.jpeg')",
+                backgroundImage: "url('/images/home.jpeg')",
             }}
         >
             <h1 className="absolute bottom-[20%] left-1/2 transform -translate-x-1/2 text-center text-white capitalize font-bold shadow-md text-5xl md:text-6xl xl:text-8xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">

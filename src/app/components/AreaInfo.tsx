@@ -17,7 +17,7 @@ interface Landmark {
     distance: string;
 }
 
-import jsonData from "../data/area_info.json";
+import jsonData from "@/data/area_info.json";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(2),

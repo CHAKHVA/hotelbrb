@@ -57,7 +57,7 @@ export default function Header() {
             <div className="container flex justify-between items-center h-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
                 <Link href={"/"} onClick={() => setActivePage("/")}>
                     <Image
-                        src="/img/logo.png"
+                        src="/images/logo.png"
                         alt="Hotel Logo"
                         width={150}
                         height={50}

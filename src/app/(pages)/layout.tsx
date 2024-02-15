@@ -1,4 +1,4 @@
-import HeaderImage from "@/app/components/HeaderImage";
+import HeaderImage from "@/components/HeaderImage";
 
 export default function PagesLayout({
     children,

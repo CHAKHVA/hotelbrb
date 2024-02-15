@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center md:space-x-10">
                     <div className="mb-2 md:mb-0">
                         <Image
-                            src="/img/logo.png"
+                            src="/images/logo.png"
                             alt="Hotel Logo"
                             width={120}
                             height={40}
