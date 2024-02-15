@@ -7,7 +7,7 @@ export default function Home() {
         <div
             className="relative min-h-screen bg-cover bg-fixed bg-center bg-no-repeat "
             style={{
-                backgroundImage: "url('/img/home.jpeg')",
+                backgroundImage: "url('/images/home.jpeg')",
             }}
         >
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl text-center">
