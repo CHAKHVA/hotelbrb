@@ -35,14 +35,37 @@ export default function RootLayout({
                     <SocialLink
                         url={"https://www.facebook.com"}
                         icon={FacebookIcon}
-                        bot={"bottom-20"}
+                        bot={"bottom-96"}
                         color={"primary"}
+                        logo={null}
                     ></SocialLink>
                     <SocialLink
                         url={"https://www.instagram.com"}
                         icon={InstagramIcon}
-                        bot={"bottom-4"}
+                        bot={"bottom-80"}
                         color={"error"}
+                        logo={null}
+                    ></SocialLink>
+                    <SocialLink
+                        url={"https://www.tiktok.com"}
+                        icon={null}
+                        bot={"bottom-64"}
+                        color={"primary"}
+                        logo={"/images/tiktok.webp"}
+                    ></SocialLink>
+                    <SocialLink
+                        url={"https://www.booking.com"}
+                        icon={null}
+                        bot={"bottom-48"}
+                        color={"primary"}
+                        logo={"/images/booking.png"}
+                    ></SocialLink>
+                    <SocialLink
+                        url={"https://www.expedia.com"}
+                        icon={null}
+                        bot={"bottom-32"}
+                        color={"primary"}
+                        logo={"/images/expedia.webp"}
                     ></SocialLink>
                 </div>
             </body>

@@ -1,4 +1,5 @@
 import { FaMapMarkerAlt, FaPhone, FaFax, FaEnvelope } from "react-icons/fa";
+//import { sendEmail } from "../utils/sendEmail";
 
 export default function Contact() {
     return (
@@ -37,7 +38,12 @@ export default function Contact() {
                 </div>
 
                 <div className="bg-gray-100 p-6 rounded-lg">
-                    <form className="flex flex-col space-y-6">
+                    <form
+                        className="flex flex-col space-y-6"
+                        /*action={async (formData) => {
+                            await sendEmail(formData);
+                        }}*/
+                    >
                         <input
                             type="text"
                             placeholder="Name *"

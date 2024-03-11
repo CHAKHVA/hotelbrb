@@ -1,8 +1,8 @@
+import Image from "next/image";
 import React from "react";
 
-// Generating placeholder images from Lorem Picsum
 const images = Array.from({ length: 15 }).map((_, index) => ({
-    src: `https://picsum.photos/seed/${index + 1}/600/400`, // 600x400 images with unique seeds
+    src: `https://picsum.photos/seed/${index + 1}/600/400`,
     caption: `Image ${index + 1}`,
 }));
 
@@ -15,9 +15,11 @@ const ImageGallery = () => {
                         key={index}
                         className="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={image.src}
                             alt={`Gallery image ${index + 1}`}
+                            width={600}
+                            height={400}
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">

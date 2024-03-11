@@ -2,7 +2,27 @@
 
 import { Button } from "flowbite-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 export default function Home() {
+    const [imageUrl, setImageUrl] = useState("");
+    const [blobs, setBlobs] = useState([]);
+
+    useEffect(() => {
+        const fetchBlobs = async () => {
+            try {
+                const response = await axios.get("/api/home");
+                setBlobs(response.data);
+                console.log(response.data[0].content);
+            } catch (error) {
+                console.error("Error fetching container data:", error);
+            }
+        };
+
+        fetchBlobs();
+    }, []);
+
     return (
         <div
             className="relative min-h-screen bg-cover bg-fixed bg-center bg-no-repeat "
