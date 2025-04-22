@@ -1,0 +1,32 @@
+{
+    "closestLandmarks": [
+        { "name": "Sameba Cathedral", "distance": "0.4 km" },
+        { "name": "Presidential Palace", "distance": "0.8 km" },
+        { "name": "Avlabari Metro Station", "distance": "1 km" },
+        { "name": "Public Service Hall", "distance": "1 km" },
+        { "name": "Bridge of Peace", "distance": "1.2 km" },
+        { "name": "Metekhi Church", "distance": "1.3 km" },
+        { "name": "Sioni Cathedral", "distance": "1.4 km" },
+        { "name": "Cathedral of Saint George", "distance": "1.5 km" },
+        { "name": "9 April Park", "distance": "1.6 km" },
+        { "name": "Pushkin Park", "distance": "1.6 km" }
+    ],
+    "closestAirports": [
+        { "name": "Tbilisi International Airport", "distance": "12.6 km" }
+    ],
+    "mostPopularLandmarks": [
+        { "name": "Freedom Square", "distance": "1.6 km" },
+        { "name": "Rustaveli Theatre", "distance": "1.7 km" },
+        { "name": "Tbilisi Opera and Ballet Theatre", "distance": "1.8 km" },
+        { "name": "Tbilisi Botanical Garden", "distance": "2.1 km" },
+        {
+            "name": "Georgian National Academy of Sciences",
+            "distance": "2.3 km"
+        },
+        { "name": "Tbilisi Concert Hall", "distance": "2.8 km" },
+        { "name": "Tbilisi Circus", "distance": "3.1 km" },
+        { "name": "Heroes Square", "distance": "3.3 km" },
+        { "name": "Tbilisi Zoo", "distance": "3.6 km" },
+        { "name": "Tbilisi Sports Palace", "distance": "3.8 km" }
+    ]
+}

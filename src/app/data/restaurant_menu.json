@@ -1,0 +1,64 @@
+{
+    "menu": [
+        {
+            "category": "Cold Dishes",
+            "items": [
+                {
+                    "name": "Caesar Salad",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "7.99"
+                },
+                {
+                    "name": "Sushi Platter",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "22.99"
+                }
+            ]
+        },
+        {
+            "category": "Hot Dishes",
+            "items": [
+                {
+                    "name": "Spaghetti Carbonara",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "12.99"
+                },
+                {
+                    "name": "Chicken Curry",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "14.99"
+                }
+            ]
+        },
+        {
+            "category": "Beverages",
+            "items": [
+                {
+                    "name": "Lemonade",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "3.99"
+                },
+                {
+                    "name": "Espresso",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "2.99"
+                }
+            ]
+        },
+        {
+            "category": "Desserts",
+            "items": [
+                {
+                    "name": "Cheesecake",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "6.99"
+                },
+                {
+                    "name": "Chocolate Mousse",
+                    "image": "/images/menu/carbonara.jpeg",
+                    "price": "5.99"
+                }
+            ]
+        }
+    ]
+}
