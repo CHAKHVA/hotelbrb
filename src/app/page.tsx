@@ -1,15 +1,14 @@
-"use client";
+//"use client";
 
-import { Button } from "flowbite-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import axios from "axios";
+//import { useEffect, useState } from "react";
+//import axios from "axios";
 
 export default function Home() {
-    const [imageUrl, setImageUrl] = useState("");
-    const [blobs, setBlobs] = useState([]);
+    //const [imageUrl, setImageUrl] = useState("");
+    //const [blobs, setBlobs] = useState([]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const fetchBlobs = async () => {
             try {
                 const response = await axios.get("/api/home");
@@ -21,7 +20,7 @@ export default function Home() {
         };
 
         fetchBlobs();
-    }, []);
+    }, []);*/
 
     return (
         <div
@@ -42,9 +41,9 @@ export default function Home() {
                         <hr />
                     </div>
                     <Link href="/contact">
-                        <Button color="warning" pill size="lg">
+                        <button className="bg-yellow-400 text-lg text-white font-semibold py-2 px-4 lg:py-3 lg:px-6 rounded-full hover:bg-yellow-500 transition-colors duration-200">
                             Contact Us
-                        </Button>
+                        </button>
                     </Link>
                 </div>
             </div>

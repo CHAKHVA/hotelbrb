@@ -36,18 +36,20 @@ const RestaurantMenu = () => {
                     </button>
                 ))}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {restaurant_menu.menu
-                    .filter(
-                        ({ category }) =>
-                            selectedCategory === null ||
-                            category === selectedCategory
-                    )
-                    .flatMap(({ items }) =>
-                        items.map((item) => (
-                            <MenuItem key={item.name} {...item} />
-                        ))
-                    )}
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col gap-8">
+                    {restaurant_menu.menu
+                        .filter(
+                            ({ category }) =>
+                                selectedCategory === null ||
+                                category === selectedCategory
+                        )
+                        .flatMap(({ items }) =>
+                            items.map((item) => (
+                                <MenuItem key={item.name} {...item} />
+                            ))
+                        )}
+                </div>
             </div>
         </div>
     );
